@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+.item p {
+    color: black;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.item {
+    background-color: rgb(28, 201, 245);
+    border: 2px black solid;
+}
+
+/* Aplico las propiedades de Grid */
+
+.gridPadre {
+    display: grid;
+    /* Activo el sistema de grillas */
+
+    /* Sirve para aplicar las cantidad de columnas que queramos */
+    grid-template-columns: repeat(3,1fr);
+
+    /* Sirve para cambiar la altura de las celdas */
+    grid-template-rows: 100px 100px 100px;
+
+    /* Es un espacio que genera un espacion entre medio de las celdas */
+    column-gap: 10px;
+    row-gap: 10px;
+
+    /* justify-items = start - end - center - stretch / acomoda de manera horizontal */
+    
+    /* aling-items = start - end - center - stretch /acomoda de manera vertical */
+
+    /* POSICIONAMIENTO DE TODOS LOS ELEMENTOS */
+
+    /* justify-content = start - end - center - stretch / Posicionamiento en eje horizontal */
+
+    /* align-content = start - end - center - stretch /Posicionamiento en eje vertical */
+    
+    /* height: 500px;
+    align-content: end; */
+}
+
+/* TRABAJAMOS CON GRID AREAS */
+
+.contenedor {
+    display: grid;
+    grid-template-columns: 0.5fr 0.8fr 0.8fr 0.5fr;
+    grid-template-rows: 8em 20em 20em 5em;
+    grid-template-areas:
+    "nav header header header"
+    "nav sectionA sectionA aside"
+    "nav sectionB sectionB aside"
+    "nav footer footer footer"
+    ;
+}
+
+header {
+    background-color: aquamarine;
+    grid-area: header;
+    display: flex;
+    justify-content: center;
+}
+.header-titulo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav {
+    background-color: cadetblue;
+    grid-area: nav;
+}
+
+
+.sectionA {
+    background-color: burlywood;
+    grid-area: sectionA;
+    display: flex;
+    justify-content: center;
+
+    /* justify-content: center; */
+}
+
+.sectionA-titulo {
+    display: flex;
+    justify-content: center;
+}
+
+.sectionA-parrafo {
+    display: flex;
+    
+    align-items: center
+}
+
+.sectionB {
+    background-color: crimson;
+    grid-area: sectionB;
+}
+
+aside {
+    background-color:rgb(81, 240, 107);
+    grid-area: aside;
+}
+
+footer {
+    background-color: dodgerblue;
+    grid-area: footer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
